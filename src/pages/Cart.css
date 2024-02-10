@@ -1,0 +1,32 @@
+.cart-content {
+    background-color: #3064b8;
+    padding: 150px;
+}
+
+.cart-content h2 {
+    color: white;
+    text-align: center;
+}
+
+.cart-content h6 {
+    color: white;
+    text-align: center;
+}
+
+.table img {
+    width: 50px;
+}
+
+input {
+
+    width: 20%;
+    text-align: center;
+}
+.checkout button{
+    margin-left: 80%;
+    width: 20%;
+    background-color: green;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+}

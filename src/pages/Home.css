@@ -1,0 +1,32 @@
+.whole {
+    background-color: #3064b8;
+    
+}
+
+.content {
+    padding-top: 10%;
+   margin-left: 5%;
+}
+
+.content h2, 
+p  {
+    color: white;
+}
+.content h5  {
+    color: white;
+}
+
+.content button {
+    background-color: #00b779;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+}
+.card-wrap2 .card{
+    border: none;
+    background-color: rgb(248, 244, 240);
+    width: 90%;
+    margin-left: 5%;
+    padding: 50px;
+}

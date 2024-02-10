@@ -1,0 +1,23 @@
+.about-content {
+    background-color: #3064b8;
+    padding: 150px;
+}
+
+.about-content h2 {
+    color: white;
+    text-align: center;
+}
+.about-content 
+h6 {
+    color: white;
+    text-align: center;
+}
+.card-wrap .card {
+    border: none;
+}
+img{
+    width: 73%;
+}
+.card h5{
+    text-align: left;
+}

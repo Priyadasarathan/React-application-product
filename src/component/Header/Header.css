@@ -1,0 +1,17 @@
+.wrap{
+    padding: 27px;
+}
+.nav-bar{
+    background-color: white;
+
+
+}
+.nav-bar li{
+margin-left: 10%;
+list-style: none;
+
+}
+.nav-bar li a{
+    text-decoration: none;
+    color: black;
+    }
