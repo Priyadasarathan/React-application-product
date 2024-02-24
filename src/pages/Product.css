@@ -3,8 +3,6 @@
     /* display: flex; 
     content: wrap; */
     background-color: #f4f7fc;
-
-
 }
 
 .products {
@@ -16,6 +14,8 @@
 .products img {
     text-align: center;
     width: 200px;
+    max-width: 300px;
+    max-height: 229px;
 }
 
 .products h3 {

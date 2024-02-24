@@ -15,7 +15,6 @@ const Header = () => {
             title: "home",
             path: '/',
             isActive :pathname==='/'&& true
-
         },
         {
             title: "About",

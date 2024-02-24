@@ -24,7 +24,6 @@ const App = () => {
           draggable
           pauseOnHover
           theme="light"
-
         />
       </BrowserRouter>
 

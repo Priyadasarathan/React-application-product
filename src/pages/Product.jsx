@@ -1,35 +1,35 @@
-
-
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
 import './Product.css'
 
+
+
 function Product() {
     const [product, setProduct] = useState([]);
-    console.log(product,'product details');
 
-    
     useEffect(() => {
-        
+
         fetch('https://fakestoreapi.com/products?limit=10')
-        .then((response) => (response.json()))
-        .then((json) => setProduct(json || []))
+            .then((response) => (response.json()))
+            .then((json) => setProduct(json || []))
     }, [])
-    
-   
+
     function addToCart(id) {
+        console.log(id, 'get the id from the add to cart')
         const cartProducts = product?.find(curr => curr.id === parseInt(id));
+        console.log(cartProducts, 'fasdfasdfasdfasdfasdf');
         const localcart = JSON.parse(localStorage.getItem('cart'));
         const updatecart = { ...cartProducts, quantity: 1, subtotal: cartProducts.price }
+
+        console.log(id, 'get the product id from the cart page');
 
         if (localcart) {
             const index = localcart.findIndex(curr => curr.id === id);
             if (index != -1) {
                 const iditem = localcart[index];
                 const updatecart = { ...iditem, quantity: iditem.quantity + 1, subtotal: (iditem.price) * (iditem.quantity + 1) }
-                localcart[index] = updatecart;
+                localcart[index] = updatecart;   //change the array index
                 localStorage.setItem('cart', JSON.stringify(localcart))
-
             } else {
                 const cartitems = [...localcart, updatecart];
                 localStorage.setItem('cart', JSON.stringify(cartitems));
@@ -37,8 +37,9 @@ function Product() {
         } else {
             localStorage.setItem('cart', JSON.stringify([updatecart]));
         }
-        toast('🦄 Your product add to cart!', {
-            position: "top-right",
+
+        toast(' 🦄 Your product add to cart!', {
+            position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -58,7 +59,7 @@ function Product() {
                 {!!product?.length && product?.map(products =>
                     <div key={products.id} className='products'>
                         <h3>Product id: {products.id}</h3>
-                        <img src={products.image} alt='product-image' />
+                        <img src={products.image} className='product-image' alt='product-image' />
                         <h4>{products.title}</h4>
                         <h5>Rs. {products.price}</h5>
                         <button onClick={() => addToCart(products.id)}>Buy Now</button>
